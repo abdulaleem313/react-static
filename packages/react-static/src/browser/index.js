@@ -63,6 +63,14 @@ export const registerTemplates = async (tmps, notFoundKey) => {
   })
   Object.keys(tmps).forEach(key => {
     templates[key] = tmps[key]
+    if (!templates[key]) {
+      console.warn(
+        `Template registered without default export: ${key.replace(
+          /__react_static_root__\//,
+          ''
+        )}`
+      )
+    }
   })
   templatesByPath[PATH_404] = templates[notFoundKey]
 
@@ -429,7 +437,9 @@ export function isPrefetchableRoute(path) {
     link = new URL(path, location.href)
   } catch (e) {
     if (typeof URL !== 'function') {
-      console.error('URL polyfill is required for this browser. https://github.com/react-static/react-static/blob/master/docs/concepts.md#browser-support');
+      console.error(
+        'URL polyfill is required for this browser. https://github.com/react-static/react-static/blob/master/docs/concepts.md#browser-support'
+      )
     }
     // Return false on invalid URLs
     return false

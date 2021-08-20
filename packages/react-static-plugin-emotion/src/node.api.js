@@ -1,7 +1,13 @@
 import React from 'react'
-import { renderStylesToString } from 'emotion-server'
-import { cache } from 'emotion'
-import { CacheProvider } from '@emotion/core'
+import { CacheProvider } from '@emotion/react'
+import createCache from '@emotion/cache'
+import createEmotionServer from '@emotion/server/create-instance'
+
+const cache = createCache({
+  key: 'react-static-styles',
+})
+
+const { renderStylesToString } = createEmotionServer(cache)
 
 export default () => ({
   beforeRenderToElement: App => props => (

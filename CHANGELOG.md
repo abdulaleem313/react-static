@@ -5,8 +5,62 @@
 ### New
 
 ### Improved
+- Update emotion plugin to support 11 version ([#1558](https://github.com/react-static/react-static/pull/1558))
+- Show warning for missing template default export ([#1599](https://github.com/react-static/react-static/pull/1599))
+- Corrected mismatch between Sitemap documentation and implementation ([#1618](https://github.com/react-static/react-static/pull/1618))
+- Migrate usage of node-sass to Dart Sass ([#1621](https://github.com/react-static/react-static/pull/1621))
 
 ### Bugfix
+- Fix publicPath is used for webpack output publicPath instead of assetsPath ([#1569](https://github.com/react-static/react-static/pull/1569))
+- Fix sitemap generation for staging context ([#1616](https://github.com/react-static/react-static/pull/1616))
+- Ensure sitemap generation properly ignores `noindex` routes ([#1620](https://github.com/react-static/react-static/pull/1620))
+
+## 7.5.3
+
+### Improved
+
+- Add routeInfo hook ([#1572](https://github.com/react-static/react-static/pull/1572))
+
+### Bugfix
+
+- Fix endless suspense loop in production build ([#1573](https://github.com/react-static/react-static/pull/1573))
+
+## 7.5.2
+
+(Invalid release)
+
+## 7.5.1
+
+### Improved
+
+- Update templates with Peer Dependencies
+
+## 7.5.0
+
+### Improved
+
+- Update preact to latest version and removed outdated compat dependency ([#1486](https://github.com/react-static/react-static/pull/1486))
+- Add prefresh to replace react hot loader when using preact plugin ([#1486](https://github.com/react-static/react-static/pull/1486))
+- Add an instruction how to make it work with preact 10 ([#1497](https://github.com/react-static/react-static/pull/1500))
+- Add ability to parse frontmatter in MDX plugin ([#1533](https://github.com/react-static/react-static/pull/1533))
+- Add ability to configure hreflang links to Sitemap ([#1539](https://github.com/react-static/react-static/1539))
+- Move react to peerDependencies ([#1560](https://github.com/react-static/react-static/pull/1560))
+- Add preliminary support for React 17 ([#1560](https://github.com/react-static/react-static/pull/1560))
+- Upgrade react-helmet to 6.1.0 to remove NullComponent warnings ([#1531](https://github.com/react-static/react-static/pull/1531))
+
+### Bugfix
+
+- Fix wrong react alias for preact plugin in webpack config ([#1486](https://github.com/react-static/react-static/pull/1486))
+- Fix eslintignore not ignorning package files ([#1486](https://github.com/react-static/react-static/pull/1486))
+- Remove `@types/react-hot-loader` from TypeScript template ([#1485](https://github.com/react-static/react-static/pull/1485))
+- Expand `styled-components` peer dependency version range in `react-static-plugin-styled-components` to allow newer versions of styled-components to be used ([#1473](https://github.com/react-static/react-static/pull/1473))
+- Fix bug when calling `console.error` without arguments ([#1509](https://github.com/react-static/react-static/pull/1509))
+- Fix basepath configuration for React Router ([#1520](https://github.com/react-static/react-static/pull/1520))
+- Fix mismatched chunk names between bundle and export ([#1518](https://github.com/react-static/react-static/pull/1518))
+- Bump `git-promise` to 1.0.0, fixing a security vulnerability ([#1522](https://github.com/react-static/react-static/pull/1522))
+- Fix misconfigured HMR option for extract-css-chunks-webpack-plugin ([#1505](https://github.com/react-static/react-static/pull/1505))
+- Make `getComponentForPath` properly return 404 page when route is invalid and 404 page exists ([#1557](https://github.com/react-static/react-static/pull/1557))
+- Bump `axios` to 0.21.1, fiing a security vulnerability ([#1562](https://github.com/react-static/react-static/pull/1562))
 
 ## 7.4.1
 
@@ -32,6 +86,7 @@
 - Fix wrong image route in production build. ([#1425](https://github.com/react-static/react-static/pull/1425))
 
 ### Bugfix
+
 - Fix static rendering
 
 ## 7.3.0
